@@ -1,0 +1,3 @@
+[submodule "src/src/app/docker/inshackle-bot"]
+	path = src/src/app/docker/inshackle-bot
+	url = https://github.com/termsignal/inshackle-bot.git
