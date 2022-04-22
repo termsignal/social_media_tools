@@ -11,3 +11,5 @@ RUN chmod +x /usr/local/bin/daily.sh
 
 ENV IGUSER='jrs_eats'
 ENV IGPW=''
+
+WORKDIR /home

@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: ig-daily
+  name: ig-daily
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ig-daily
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: ig-daily
+    spec:
+      containers:
+        - image: gcr.io/chilos-terminal/ig_daily
+          name: ig-daily
+          command: ["/bin/bash", "/usr/local/bin/daily.sh"]
+          env:
+          - name: IGPW
+            value: "Malabar=15"
+          resources: {}
+status: {}
